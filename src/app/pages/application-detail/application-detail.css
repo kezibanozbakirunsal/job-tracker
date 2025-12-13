@@ -1,0 +1,12 @@
+.panel{ background:#fff; border:1px solid #eee; border-radius:14px; padding:14px; }
+.top{ display:flex; justify-content:space-between; gap:12px; align-items:flex-start; flex-wrap:wrap; }
+.muted{ color:#777; margin-top:4px; }
+.actions{ display:flex; gap:10px; align-items:center; }
+.btn{ padding:8px 12px; border:1px solid #ddd; border-radius:12px; background:#fff; }
+.danger{ padding:8px 12px; border:1px solid #f1c2c2; border-radius:12px; background:#fff; cursor:pointer; }
+.meta{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:12px; }
+.pill{ padding:6px 10px; border:1px solid #ddd; border-radius:999px; font-size:12px; }
+.notes{ margin-top:14px; }
+.link{ text-decoration: underline; }
+.back{ margin-top: 16px; }
+@media (max-width: 860px){ .meta{ grid-template-columns: 1fr; } }

@@ -1,0 +1,444 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 24px 18px 40px;
+  background:
+    radial-gradient(1000px 500px at 10% 0%, rgba(124, 58, 237, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(14, 165, 233, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0.00));
+}
+
+.page-header {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.16), rgba(14, 165, 233, 0.14));
+}
+
+.brand-mark svg {
+  width: 22px;
+  height: 22px;
+  fill: rgba(15, 23, 42, 0.82);
+}
+
+.brand-title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.brand-title:hover {
+  text-decoration: underline;
+}
+
+.brand-subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.60);
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.top-link:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.95), rgba(14, 165, 233, 0.95));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.18);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.02);
+}
+
+.btn-danger {
+  border-color: rgba(244, 63, 94, 0.35);
+  color: rgba(244, 63, 94, 0.95);
+}
+
+.btn-danger:hover {
+  background: rgba(244, 63, 94, 0.06);
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.06);
+  padding: 18px;
+}
+
+.list-hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.list-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.95), rgba(14,165,233,0.95));
+  color: #fff;
+}
+
+.list-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.list-sub {
+  margin: 4px 0 0;
+  color: rgba(15, 23, 42, 0.62);
+  font-size: 13px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 10px 0 16px;
+}
+
+.input {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(124, 58, 237, 0.70);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.16);
+}
+
+/* Div-table */
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.2fr 2fr 1.1fr 1.1fr 190px;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.row.head {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.row:not(.head):hover {
+  background: rgba(2, 6, 23, 0.02);
+}
+
+.cell a {
+  color: rgba(15, 23, 42, 0.92);
+  text-decoration: none;
+}
+
+.cell a:hover {
+  text-decoration: underline;
+}
+
+.muted {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.60);
+}
+
+/* Status pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(15, 23, 42, 0.04);
+}
+
+/* ✅ FIX: actions never overlap */
+.actions-head {
+  text-align: right;
+}
+
+.cell.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions-wrap {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* links */
+.link {
+  font-weight: 800;
+  color: rgba(124, 58, 237, 0.95);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.empty {
+  padding: 18px 12px;
+  color: rgba(15, 23, 42, 0.60);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .actions-head {
+    display: none;
+  }
+
+  .cell.actions {
+    justify-content: flex-start;
+  }
+}
+.edit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.status-pill{
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  line-height: 1;
+}
+
+/* Applied (blue) */
+.status-pill.applied{
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.25);
+  color: #1d4ed8;
+}
+
+/* Interview (amber) */
+.status-pill.interview{
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.28);
+  color: #b45309;
+}
+
+/* Rejected (red) */
+.status-pill.rejected{
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #b91c1c;
+}
+
+/* Fallback */
+.status-pill.default{
+  background: rgba(148, 163, 184, 0.15);
+  border-color: rgba(148, 163, 184, 0.30);
+  color: #475569;
+}
+/* ===== Enhanced row spacing & hover (theme-aligned) ===== */
+
+/* normal satırlar */
+.row:not(.head){
+  margin-bottom: 8px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.55);
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.18s ease;
+}
+
+/* hover efekti */
+.row:not(.head):hover{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.06),
+      rgba(14, 165, 233, 0.06)
+    );
+  box-shadow:
+    0 8px 24px rgba(2, 6, 23, 0.10),
+    inset 0 0 0 1px rgba(124, 58, 237, 0.18);
+  transform: translateY(-1px);
+}
+
+/* satır içi hizalama biraz daha ferah */
+.row:not(.head) .cell{
+  padding: 2px 0;
+}
+
+/* head row sabit kalsın */
+.row.head{
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+/* küçük ekranlarda hover daha sade */
+@media (max-width: 860px){
+  .row:not(.head):hover{
+    transform: none;
+    box-shadow: none;
+    background: rgba(124, 58, 237, 0.05);
+  }
+}
+/* status dot */
+.status-pill{
+  gap: 6px;
+}
+
+/* default dot */
+.status-pill .dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+/* applied */
+.status-pill.applied .dot{
+  background: #3b82f6;
+}
+
+/* interview */
+.status-pill.interview .dot{
+  background: #f59e0b;
+}
+
+/* rejected (no pulse – daha sakin) */
+.status-pill.rejected .dot{
+  background: #ef4444;
+  animation: none;
+}
+
+/* subtle animation */
+@keyframes pulse{
+  0%{ opacity: .6; transform: scale(.9); }
+  50%{ opacity: 1; transform: scale(1); }
+  100%{ opacity: .6; transform: scale(.9); }
+}
+/* ===== EMPTY STATE ===== */
+.empty-state{
+  margin: 28px 0 10px;
+  padding: 32px 20px;
+  text-align: center;
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.08),
+      rgba(14, 165, 233, 0.08)
+    );
+  border: 1px dashed rgba(124, 58, 237, 0.35);
+}
+
+.empty-icon{
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.empty-state h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.empty-state p{
+  margin: 8px auto 18px;
+  max-width: 420px;
+  font-size: 14px;
+  color: rgba(15, 23, 42, 0.65);
+}

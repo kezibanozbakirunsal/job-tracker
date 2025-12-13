@@ -1,0 +1,16 @@
+.topbar{
+  position: sticky; top: 0;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 18px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:10;
+}
+.brand a{ font-weight:700; }
+.nav{ display:flex; gap:12px; align-items:center; }
+.container{ padding: 18px; max-width: 980px; margin: 0 auto; }
+.btn{
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}

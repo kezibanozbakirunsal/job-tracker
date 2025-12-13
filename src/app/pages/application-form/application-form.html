@@ -1,0 +1,72 @@
+<div class="form-page">
+  <section class="panel form-card">
+
+    <div class="form-header">
+      <div class="form-icon" aria-hidden="true">📝</div>
+
+      <div class="form-head-text">
+        <h2>{{ isEdit ? 'Edit application' : 'New application' }}</h2>
+        <p>Track • Organise • Follow up</p>
+      </div>
+
+      <a routerLink="/applications" class="link back-link">← Back</a>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="form">
+      <div class="grid">
+        <label>
+          Company
+          <input class="input" type="text" formControlName="company" />
+          @if (form.controls.company.touched && form.controls.company.invalid) {
+            <small class="err">Company is required (min 2 chars).</small>
+          }
+        </label>
+
+        <label>
+          Role
+          <input class="input" type="text" formControlName="role" />
+          @if (form.controls.role.touched && form.controls.role.invalid) {
+            <small class="err">Role is required (min 2 chars).</small>
+          }
+        </label>
+
+        <label>
+          Location
+          <input class="input" type="text" formControlName="location" />
+        </label>
+
+        <label>
+          Status
+          <select class="input" formControlName="status">
+            @for (s of statuses; track s) {
+              <option [value]="s">{{ s }}</option>
+            }
+          </select>
+        </label>
+
+        <label>
+          Applied date
+          <input class="input" type="date" formControlName="appliedDate" />
+        </label>
+
+        <label class="full">
+          Notes
+          <textarea class="input" rows="5" formControlName="notes"></textarea>
+        </label>
+      </div>
+
+    
+    </form>
+
+    <!-- ✅ Floating Save button (form dışı, click ile çalışır) -->
+    <button
+  type="button"
+  class="save-fab add-btn"
+  (click)="save()"
+  [disabled]="form.invalid"
+>
+  {{ isEdit ? 'Save' : 'Add' }}
+</button>
+
+  </section>
+</div>

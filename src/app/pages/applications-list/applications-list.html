@@ -1,0 +1,117 @@
+<header class="page-header">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" role="img">
+        <path
+          d="M12 2c-3 0-5 2.2-5 5v10c0 3.9 2.1 5 5 5s5-1.1 5-5V7c0-2.8-2-5-5-5zm-3 5c0-1.9 1.3-3 3-3s3 1.1 3 3v2H9V7zm3 1c.6 0 1 .4 1 1v2a1 1 0 1 1-2 0V9c0-.6.4-1 1-1z"
+        />
+      </svg>
+    </div>
+
+    <div class="brand-text">
+      <a class="brand-title" routerLink="/applications">Job Application Tracker</a>
+      <p class="brand-subtitle">Track • Organise • Follow up</p>
+    </div>
+  </div>
+
+  <nav class="top-actions">
+    <a class="top-link" routerLink="/applications">Applications</a>
+    <a class="btn btn-primary" routerLink="/applications/new">+ New</a>
+  </nav>
+</header>
+
+<section class="page-shell">
+  <div class="list-hero">
+    <div class="list-icon" aria-hidden="true">📌</div>
+    <div>
+      <h2 class="list-title">Applications</h2>
+      <p class="list-sub">Your job search, organised in one place.</p>
+    </div>
+  </div>
+
+  <div class="filters">
+    <input
+      class="input"
+      type="text"
+      placeholder="Search company / role / location..."
+      [value]="query()"
+      (input)="query.set(($any($event.target)).value)"
+    />
+
+    <select
+      class="input"
+      [value]="status()"
+      (change)="status.set(($any($event.target)).value)"
+    >
+      <option value="All">All statuses</option>
+      @for (s of statuses(); track s) {
+        <option [value]="s">{{ s }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="table">
+    <div class="row head">
+      <div>Company</div>
+      <div>Role</div>
+      <div>Status</div>
+      <div>Date</div>
+      <div class="actions-head">Actions</div>
+    </div>
+
+    @if (items().length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">📭</div>
+        <h3>No applications yet</h3>
+        <p>
+          Start tracking your job applications and keep everything organised
+          in one place.
+        </p>
+
+        <a class="btn btn-primary" routerLink="/applications/new">
+          + Add your first application
+        </a>
+      </div>
+    } @else {
+      @for (item of items(); track item.id) {
+        <div class="row">
+          <div class="cell">
+            <a [routerLink]="['/applications', item.id]">
+              <strong>{{ item.company }}</strong>
+            </a>
+            <div class="muted">{{ item.location }}</div>
+          </div>
+
+          <div class="cell">{{ item.role }}</div>
+
+          <div class="cell">
+            <span class="status-pill" [ngClass]="statusClass(item.status)">
+              <span class="dot"></span>
+              {{ item.status }}
+            </span>
+          </div>
+
+          <div class="cell">{{ item.appliedDate }}</div>
+
+          <div class="cell actions">
+            <div class="actions-wrap">
+              <a
+                class="link edit-link"
+                [routerLink]="['/applications', item.id, 'edit']"
+              >
+                ✏️ Edit
+              </a>
+              <button
+                class="btn btn-danger"
+                type="button"
+                (click)="remove(item.id)"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</section>
