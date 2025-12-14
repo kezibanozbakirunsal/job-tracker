@@ -34,10 +34,22 @@ jobs:
       - name: Build
         run: npm run build -- --configuration production --base-href "/job-tracker/"
 
+      - name: Find Pages artifact directory
+        id: find
+        run: |
+          set -e
+          echo "Listing dist/..."
+          ls -la dist || true
+          # Find the directory that contains index.html
+          DIR="$(dirname "$(find dist -name index.html -print -quit)")"
+          echo "Found index.html in: $DIR"
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "dist"
+          path: ${{ steps.find.outputs.dir }}
+
 
   deploy:
     environment:
