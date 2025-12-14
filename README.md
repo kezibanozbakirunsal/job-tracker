@@ -1,59 +1,79 @@
-# JobTracker
+# Job Application Tracker 🚀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+A simple and user-friendly **Angular** application to track job applications in one place.
 
-## Development server
+🔗 **Live Demo:**  
+https://kezibanozbakirunsal.github.io/job-tracker/
 
-To start a local development server, run:
+---
+
+## ✨ Features
+
+- Add, edit, and delete job applications  
+- Track application status (Applied, Interview, Offer, Rejected, etc.)
+- Search by company, role, or location
+- Filter applications by status
+- Clean and modern UI with an empty-state experience
+- Responsive layout for everyday use
+
+---
+
+## 🛠️ Built With
+
+- Angular (Standalone Components)
+- TypeScript
+- HTML & CSS
+- GitHub Pages
+- GitHub Actions (CI/CD)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ └─ app/
+    ├─ pages/
+    │  ├─ applications-list
+    │  ├─ application-detail
+    │  └─ application-form
+    ├─ services/
+    │  └─ applications.service.ts
+    └─ models/
+       └─ application.model.ts
+```
+
+---
+
+## ▶️ Run Locally
 
 ```bash
+git clone https://github.com/kezibanozbakirunsal/job-tracker.git
+cd job-tracker
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open:  
+http://localhost:4200
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🌍 Deployment
 
-```bash
-ng generate component component-name
-```
+This project is automatically built and deployed using **GitHub Actions** and published via **GitHub Pages**.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Every push to the `master` branch triggers a new deployment.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 👩‍💻 Author
 
-To build the project run:
+**Keziban Ozbakır Ünsal**  
+GitHub: https://github.com/kezibanozbakirunsal
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📌 Notes
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project was created as part of my learning journey in **Angular and front-end development**, focusing on clean structure, usability, and real-world scenarios.
